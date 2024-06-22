@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "project": {
+    "name": "foodapplication"
+  },
+  "api": {
+    "projectId": "mh3wu7yl",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "env": {
+    "development": {
+      "plugins": []
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    }
+  ]
+}

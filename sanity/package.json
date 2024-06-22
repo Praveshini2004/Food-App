@@ -1,0 +1,34 @@
+{
+  "name": "foodapplication",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "21CSE023 PRAVESHINI <21cse023.praveshinibnv@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "build": "sanity build"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^2.36.2",
+    "@sanity/client": "^6.19.1",
+    "@sanity/core": "^2.36.2",
+    "@sanity/default-layout": "^2.36.2",
+    "@sanity/default-login": "^2.36.2",
+    "@sanity/desk-tool": "^2.36.2",
+    "@sanity/eslint-config-studio": "^4.0.0",
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.44.0",
+    "eslint": "^8.6.0",
+    "next": "^14.2.3",
+    "prop-types": "^15.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {}
+}
