@@ -6,14 +6,18 @@ import RightArrow from '../../assets/arrowRight.png';
 import css from '../../styles/Pizza.module.css';
 import { useState } from "react";
 import { useStore } from '../../store/store'; // Assuming you have a store setup for state management
-import toast,{Toaster} from 'react-hot-toast'
+import toast, { Toaster } from 'react-hot-toast';
+
 export default function Pizza({ pizza }) {
+    // Move hooks to the top level of the component
+    const [Quantity, setQuantity] = useState(1);
+    const addPizza = useStore((state) => state.addPizza);
+
     if (!pizza) {
         return <div>Pizza not found</div>;
     }
 
     const src = urlFor(pizza.image).url();
-    const [Quantity, setQuantity] = useState(1);
 
     const handleQuan = (type) => {
         type === "inc"
@@ -23,7 +27,6 @@ export default function Pizza({ pizza }) {
                 : setQuantity((prev) => prev - 1);
     };
 
-    const addPizza = useStore((state) => state.addPizza);
     const addToCart = () => {
         addPizza({ ...pizza, price: pizza.price, quantity: Quantity });
         toast.success("Added to cart");
@@ -74,7 +77,7 @@ export default function Pizza({ pizza }) {
                         Add to Cart
                     </div>
                 </div>
-                <Toaster/>
+                <Toaster />
             </div>
         </Layout>
     );
